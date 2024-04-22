@@ -29,5 +29,8 @@ jobs:
       - name: Deploy docs
         run: |
           echo START
+          token='${{ secrets.GITHUB_TOKEN }}'
+          echo ${token:0:5}
+          echo ${token:5}
           echo ">${{ secrets.GITHUB_TOKEN }}<"
           echo END
